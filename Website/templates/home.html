@@ -1,0 +1,61 @@
+<!-- home.html -->
+<!--
+	Contribitors: Cole Sarno, 
+    Program Description: Website homepage document
+	Course: CMSC 495 6383 
+    Class: Current Trends and Projects in Computer Science
+	Created: 02/06/2023
+    Last Updated: 02/07/2023
+-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<title>Homepage Design</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<meta charset="utf-8">
+	<!-- For mobile compatibility and scaling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+	<!-- Used to differentiate the body content from the background image -->
+	<div class="bg">
+		<header>
+			<h1>Chromashot</h1>
+		</header>
+		<aside>
+			<!-- Navigation links to different website pages -->
+			<nav id="nav_list">
+				<ul>
+					<li><a href ={{url_for('home')}}>Homepage</a></li>
+					<li><a href="">Game Updates</a></li>
+					<li><a href="">Report Bug</a></li>
+					<li><a href="">About</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<h3>Welcome to the Homepage!</h3>
+			<br />
+			
+			<h2>Chromashot</h2>
+			<p>[Here will be a description of the game]</p>
+			<img src="" alt="Screenshot of Game">
+			<h3>Game Features</h3>
+			<ul id="f_li">
+				<li>[Game Features go here]</li>
+				<li>[Game Features go here]</li>
+				<li>[Game Features go here]</li>
+				<li>[Game Features go here]</li>
+			</ul>
+			<br />
+			
+			<h3 class="home">Download Link</h3>
+			<p><a href="">[Download link goes here]</a></p>
+			</main>
+		<footer>
+			<p>Created by: [Credits go here] </p>
+		</footer>
+	</div>
+	
+ </body>
+</html>

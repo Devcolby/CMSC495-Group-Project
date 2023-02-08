@@ -1,0 +1,111 @@
+/* styles.css */
+/* Contribitors: Cole Sarno, 
+   Program Description: CSS stylesheet for website
+   Course: CMSC 495 6383 
+   Class: Current Trends and Projects in Computer Science
+   Created: 02/07/2023
+   Last Updated: 02/07/2023
+*/
+/* Formats all elements */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/* Formats navigation list */
+#nav_list ul{
+	list-style-type: none;
+	padding: 1em 0;
+}
+#nav_list ul li{
+	margin-right:1%;
+	float: left;
+}
+/* Creates a button for each link in nav_list */
+#nav_list ul li a{
+	text-align: center;
+	display: block;
+	padding: 0.5em .5em .5em .5em;
+	text-decoration: none;
+	background-color: white;
+	font-weight: bold;
+	color: black;
+	border: 1px solid black;
+}
+/* Makes it so the last button does not have a margin*/
+#nav_list ul li.lastitem{ 
+	margin-right: none
+}
+/* Makes it so when you hover over a button it turns from white to yellow */
+#nav_list ul li a:hover{
+	background-color: yellow;
+}
+/* Formats the main content so it stays to the left with a small margin */
+main{
+	float: left;
+	margin-left: 1em;
+}
+/* Formats the width of the aside, which holds the nav menu,
+		to be the width of the entire screen */
+aside{
+	width: 100%;
+}
+
+/* Formatting for body  */
+body{
+	width: 90%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+/* Formatting for header */
+header{
+	text-align: center;
+	background-color: white;
+	padding: 15px 1.5625%;
+	border: 1px solid black;
+}
+/* Formatting for main */
+main{
+	width: 76.9%;
+	padding: 15px 1.5625%;
+	margin-right: 2em;
+	border: 1px solid black;
+}
+/* Formatting for aside (nav menu) */
+aside{
+	float: left;
+	padding:15px 1.5625%;
+}
+/* Formatting for footer */
+footer{
+	clear: both;
+	padding: 15px 1.5625%;
+	border-top: 2px solid black;
+	color: white;
+	text-shadow: 1px 1px black;
+	background-color: black;
+}
+/* Adds borders around h2, h3, feature list and img elements */
+h2{
+	border-bottom: 1px solid black;
+}
+h3{
+	border-bottom: 1px solid black;
+}
+ul#f_li{
+	border: 2px solid black;
+	padding-left: 30px;
+}
+img{
+	border: 2px solid black;
+	padding: 15px 1.5625%;
+}
+/* Used to create a white box around the body content */
+div.bg{
+	margin-right: 10%;
+	max-width: 1024px;
+	background-color: white;
+	position: absolute;
+	display: inline-block;
+	border: 1px solid black;
+}

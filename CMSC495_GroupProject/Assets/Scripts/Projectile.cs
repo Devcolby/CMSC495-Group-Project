@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float speed = 2.0f;
+    [SerializeField] Vector3 direction;
+    public System.Action destroyed;
+
+    private void Update()
     {
-        
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(destroyed != null)
+            destroyed.Invoke();
+
+        Destroy(gameObject);
     }
 }

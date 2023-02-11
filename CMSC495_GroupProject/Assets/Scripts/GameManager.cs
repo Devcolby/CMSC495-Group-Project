@@ -160,4 +160,11 @@ public class GameManager : MonoBehaviour
         player.SetPaused(false);
         uiManager.HidePauseMenu();
     }
+
+    public void GameOver()
+    {
+        player.gameObject.SetActive(false);
+        enemyGrid.SetPaused(true);
+        uiManager.ShowGameOver();
+    }
 }

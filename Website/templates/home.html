@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
  <body>
+	<img class="bg_img" src="{{ url_for('static', filename='background.jpg') }}">
 	<!-- Used to differentiate the body content from the background image -->
 	<div class="bg">
 		<header>
@@ -29,7 +30,7 @@
 					<li><a href ={{url_for('home')}}>Homepage</a></li>
 					<li><a href="">Game Updates</a></li>
 					<li><a href="">Report Bug</a></li>
-					<li><a href="">About</a></li>
+					<li><a href={{url_for('about')}}>About</a></li>
 				</ul>
 			</nav>
 		</aside>

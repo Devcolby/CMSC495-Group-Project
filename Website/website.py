@@ -24,6 +24,12 @@ def home():
     Brings the user to the homepage
     '''
     return render_template('home.html')
+@app.route('/about/')
+def about():
+    '''
+    Brings user to the about page
+    '''
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run()

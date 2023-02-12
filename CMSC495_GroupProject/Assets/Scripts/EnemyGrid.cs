@@ -77,7 +77,6 @@ public class EnemyGrid : MonoBehaviour
         if (enemiesKilled >= totalEnemies)
         {
             enemiesKilled = 0;
-            booster = 0.0f;
             transform.localPosition = startingPosition;
             gameManager.NewWave();
         }

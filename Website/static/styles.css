@@ -56,6 +56,8 @@ body{
 	width: 90%;
 	max-width: 1024px;
 	margin: 0 auto;
+	background-image: url("background.jpg");
+    background-color: black;
 }
 /* Formatting for header */
 header{
@@ -97,7 +99,6 @@ ul#f_li{
 	padding-left: 30px;
 }
 img{
-	border: 2px solid black;
 	padding: 15px 1.5625%;
 }
 /* Used to create a white box around the body content */

@@ -110,3 +110,12 @@ div.bg{
 	display: inline-block;
 	border: 1px solid black;
 }
+div.post{
+    background-color: black;
+    border: 3px solid blue;
+    margin: 0.5em .5em .5em .5em;
+    padding: 15px 1.5625%;
+}
+div.post p, div.post h3{
+    color: white;
+}

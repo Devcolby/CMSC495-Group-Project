@@ -1,0 +1,55 @@
+<!-- game_updates.html -->
+<!--
+	Contribitors: Sairam Soundararajan, Cole Sarno
+    Program Description: Website Game Updates document
+	Course: CMSC 495 6383
+    Class: Current Trends and Projects in Computer Science
+	Created: 02/12/2023
+    Last Updated: 02/12/2023
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Game Updates</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+ </head>
+<body>
+    <!-- Used to differentiate the body content from the background image -->
+	<div class="bg">
+        <header>
+			<h1>Chromashot</h1>
+		</header>
+        <aside>
+        <!-- Navigation links to different website pages -->
+			<nav id="nav_list">
+				<ul>
+					<li><a href ={{url_for('home')}}>Homepage</a></li>
+					<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+					<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+					<li><a href={{url_for('about')}}>About</a></li>
+				</ul>
+			</nav>
+		</aside>
+        <main>
+            <h2>Game Updates</h2>
+            <div class="post">
+                <h3>Name: Cole Sarno</h3>
+                <h3>Date: 02/12/2023</h3>
+                <h3>Description: Update on Web Development</h3>
+                <p>The links on the website are now all live! Pages for Game Updates
+                and to Report Bugs are available. We are working hard on filling in
+                the content for the Home and About pages. The Report Bug feature is
+                also being implemented soon.</p>
+            </div>
+            <div class="post">
+                <h3>Name: Cole Sarno </h3>
+                <h3>Date: 02/11/2023</h3>
+                <h3>Description: Example Update</h3>
+                <p>This is an example of the format for the game updates.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

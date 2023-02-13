@@ -4,7 +4,7 @@
     Course: CMSC 495 6383 
     Class: Current Trends and Projects in Computer Science
     Created: 02/07/2023
-    Last Updated: 02/07/2023
+    Last Updated: 02/12/2023
 '''
 from datetime import datetime
 from flask import Flask
@@ -30,6 +30,18 @@ def about():
     Brings user to the about page
     '''
     return render_template('about.html')
+@app.route('/game_updates/')
+def game_updates():
+    '''
+    Brings user to the game updates page
+    '''
+    return render_template('game_updates.html')
+@app.route('/report_bug')
+def report_bug():
+    '''
+    Brings user to the report bug page
+    '''
+    return render_template('report_bug.html')
 
 if __name__ == "__main__":
     app.run()

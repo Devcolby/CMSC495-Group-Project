@@ -93,19 +93,11 @@ public class EnemyGrid : MonoBehaviour
 
             for (int y = 0; y < columns; y++)
             {
-                if (x >= enemyPrefabs.Length)
-                {
-                    Enemy enemy = Instantiate(enemyPrefabs[enemyPrefabs.Length - 1], transform);
-                    continue;
-                }
-                else
-                {
-                    Enemy enemy = Instantiate(enemyPrefabs[x], transform);
-                    enemy.Killed += EnemyKilled;
-                    Vector3 position = rowPosition;
-                    position.x += y * spacing;
-                    enemy.transform.localPosition = position;
-                }
+                Enemy enemy = Instantiate(enemyPrefabs[x], transform);
+                enemy.Killed += EnemyKilled;
+                Vector3 position = rowPosition;
+                position.x += y * spacing;
+                enemy.transform.localPosition = position;
             }
         }
     }

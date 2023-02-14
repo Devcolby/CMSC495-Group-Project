@@ -7,6 +7,8 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject gameRules;
+    [SerializeField] GameObject about;
+    [SerializeField] GameObject controls;
 
     public void StartGame()
     {
@@ -28,6 +30,21 @@ public class MainMenuManager : MonoBehaviour
     public void MainMenu()
     {
         gameRules.SetActive(false);
+        controls.SetActive(false);
+        about.SetActive(false);
+
         mainMenu.SetActive(true);
+    }
+
+    public void Controls()
+    {
+        mainMenu.SetActive(false);
+        controls.SetActive(true);
+    }
+
+    public void About()
+    {
+        mainMenu.SetActive(false);
+        about.SetActive(true);
     }
 }

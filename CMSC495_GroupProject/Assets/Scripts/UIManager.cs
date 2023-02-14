@@ -15,6 +15,11 @@ public class UIManager : MonoBehaviour
 
     List<GameObject> lifeSprites = new List<GameObject>();
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void SetPoints(int points)
     {
         pointsText.text = points.ToString();

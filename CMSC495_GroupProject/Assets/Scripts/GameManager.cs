@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] int lives = 3;
-    [SerializeField] int wave = 1;
+    [SerializeField] int wave = 0;
     [SerializeField] int points = 0;
 
     [SerializeField] UIManager uiManager;
@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartNewGame();
+        uiManager.SetLives(lives);
+        NewWave();
     }
 
     private void Update()
@@ -128,7 +129,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager.HideGameOver();
         lives = 3;
-        wave = 1;
+        wave = 0;
         points = 0;
         uiManager.SetLives(lives);
         player.gameObject.SetActive(true);

@@ -11,6 +11,7 @@ public class CustomButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        outline.enabled = false;
         onClick.Invoke();
     }
 

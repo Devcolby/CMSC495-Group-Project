@@ -64,21 +64,24 @@ public class GameManager : MonoBehaviour
         switch(wave)
         {
             case 2:
-                enemyGrid.AddColumns(2);
+                enemyGrid.AddColumns(4);
                 break;
             case 3:
-                enemyGrid.IncreaseBooster(0.5f);
+                enemyGrid.AddRow(1);
+                enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 4:
-                enemyGrid.AddColumns(2);
+                enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 5:
                 enemyGrid.AddRow(1);
                 break;
             case 6:
-                enemyGrid.IncreaseBooster(0.5f);
+                enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 7:
+                enemyGrid.AddRow(1);
+                enemyGrid.AddColumns(2);
                 break;
             case 8:
                 enemyGrid.AddRow(1);

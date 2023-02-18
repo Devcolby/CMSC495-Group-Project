@@ -9,12 +9,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: animationSprites.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: animationSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+      objectReference: {fileID: 811481820, guid: 3e1c0b74f963a4a43844507246ec8445, type: 3}
+    - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: animationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 304494737, guid: 3e1c0b74f963a4a43844507246ec8445, type: 3}
+    - target: {fileID: 6675133899855632143, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675133899855632143, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9416841
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675133899855632143, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.029157937
+      objectReference: {fileID: 0}
     - target: {fileID: 6675133899855632143, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 1
@@ -33,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6858863653993451212, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: m_Name
-      value: Enemy_Basic
+      value: Enemy03
       objectReference: {fileID: 0}
     - target: {fileID: 6858863653993451250, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: m_Size.x
@@ -46,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 6858863653993451250, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+      objectReference: {fileID: 811481820, guid: 3e1c0b74f963a4a43844507246ec8445, type: 3}
     - target: {fileID: 6858863653993451250, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: m_Color.b
       value: 0

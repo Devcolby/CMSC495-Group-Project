@@ -310,6 +310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 358833343}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -534,6 +537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 911069721}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -640,6 +646,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 609949917}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -706,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 1, b: 0.41581964, a: 1}
+  m_EffectColor: {r: 1, g: 0.9962425, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &358833344
@@ -804,6 +813,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 560542732}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -1098,7 +1110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 25}
   m_SizeDelta: {x: 168.70251, y: 64.3765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448312007
@@ -1114,6 +1126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 1101052615}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -1464,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 1, b: 0.41581964, a: 1}
+  m_EffectColor: {r: 1, g: 0, b: 0.6581006, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &560542733
@@ -1640,7 +1655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -50.93375}
+  m_AnchoredPosition: {x: 80, y: -46.93375}
   m_SizeDelta: {x: 500, y: 41.8675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704547176
@@ -1686,6 +1701,88 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704547174}
+  m_CullTransparentMesh: 1
+--- !u!1 &727942331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727942332}
+  - component: {fileID: 727942334}
+  - component: {fileID: 727942333}
+  m_Layer: 5
+  m_Name: GameRulesDescription01 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &727942332
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727942331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989093383}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -315.75952}
+  m_SizeDelta: {x: 500, y: 44.5784}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &727942333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727942331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 973839659f4eabc42b7b2dbcd58e5791, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: '-Quality Assurance-
+
+    David Toyloy'
+--- !u!222 &727942334
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727942331}
   m_CullTransparentMesh: 1
 --- !u!1 &804234209
 GameObject:
@@ -2168,7 +2265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -156.9581}
+  m_AnchoredPosition: {x: 80, y: -136.9581}
   m_SizeDelta: {x: 500, y: 51.8676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958296774
@@ -2688,7 +2785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -232.89189}
+  m_AnchoredPosition: {x: 80, y: -204.8919}
   m_SizeDelta: {x: 600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258813523
@@ -2831,6 +2928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 1162556533}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -2899,6 +2999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 106806003}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -2987,7 +3090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -305.1811}
+  m_AnchoredPosition: {x: 80, y: -269.1811}
   m_SizeDelta: {x: 500, y: 44.5784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484873625
@@ -3244,6 +3347,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 1247767859}
+  audioSrc: {fileID: 0}
+  hoverClip: {fileID: 0}
+  clickClip: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -3389,7 +3495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -101.4459}
+  m_AnchoredPosition: {x: 80, y: -89.4459}
   m_SizeDelta: {x: 500, y: 39.1568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842114698
@@ -3583,6 +3689,7 @@ RectTransform:
   - {fileID: 958296773}
   - {fileID: 1258813522}
   - {fileID: 1484873624}
+  - {fileID: 727942332}
   m_Father: {fileID: 46040055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3606,10 +3713,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 30
+    m_Top: 26
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 10
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

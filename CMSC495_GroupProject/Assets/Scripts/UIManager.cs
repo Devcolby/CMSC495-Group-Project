@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
 
     public void SetLives(int lives)
     {
-        for(int i = 0; i < lives; i++)
+        for(int i = 0; i < lives - 1; i++)
         {
             GameObject spawnedSprite = Instantiate(lifeSpritePrefab, livesParent);
             lifeSprites.Add(spawnedSprite);
@@ -48,9 +48,11 @@ public class UIManager : MonoBehaviour
 
     public void RemoveLife()
     {
-        Destroy(lifeSprites[lifeSprites.Count - 1].gameObject);
-        if (lifeSprites.Count >= 0)
+        if (lifeSprites.Count > 0)
+        {
+            Destroy(lifeSprites[lifeSprites.Count - 1].gameObject);
             lifeSprites.RemoveAt(lifeSprites.Count - 1);
+        }
     }
 
     public void ShowGameOver()

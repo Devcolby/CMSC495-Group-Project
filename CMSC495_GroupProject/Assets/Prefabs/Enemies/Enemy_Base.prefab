@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6858863653993451250}
   - component: {fileID: 6675133899855632143}
   - component: {fileID: 898925303}
+  - component: {fileID: 7185623036995502171}
   m_Layer: 8
   m_Name: Enemy_Base
   m_TagString: Untagged
@@ -128,3 +129,24 @@ MonoBehaviour:
   animationSprites: []
   animationTime: 1
   projectilePrefab: {fileID: 4415714024920657117, guid: f5245c425b37f9947b53248f92d3032d, type: 3}
+--- !u!50 &7185623036995502171
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858863653993451212}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4

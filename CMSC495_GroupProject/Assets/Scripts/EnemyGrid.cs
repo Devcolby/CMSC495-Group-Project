@@ -17,6 +17,7 @@ public class EnemyGrid : MonoBehaviour
     [SerializeField] Projectile missilePrefab;
     [SerializeField] GameManager gameManager;
 
+    [SerializeField] bool randomizeEnemyType = false;
 
     int startingRows;
     int startingColumns;
@@ -93,11 +94,23 @@ public class EnemyGrid : MonoBehaviour
 
             for (int y = 0; y < columns; y++)
             {
-                Enemy enemy = Instantiate(enemyPrefabs[x], transform);
-                enemy.Killed += EnemyKilled;
-                Vector3 position = rowPosition;
-                position.x += y * spacing;
-                enemy.transform.localPosition = position;
+                if (randomizeEnemyType)
+                {
+                    int randInt = Random.Range(0, enemyPrefabs.Length);
+                    Enemy enemy = Instantiate(enemyPrefabs[randInt], transform);
+                    enemy.Killed += EnemyKilled;
+                    Vector3 position = rowPosition;
+                    position.x += y * spacing;
+                    enemy.transform.localPosition = position;
+                }
+                else
+                {
+                    Enemy enemy = Instantiate(enemyPrefabs[x], transform);
+                    enemy.Killed += EnemyKilled;
+                    Vector3 position = rowPosition;
+                    position.x += y * spacing;
+                    enemy.transform.localPosition = position;
+                }
             }
         }
     }
@@ -113,8 +126,8 @@ public class EnemyGrid : MonoBehaviour
 
                 if (Random.value < (1.0f / (float)enemiesAlive))
                 {
-
-                    Instantiate(missilePrefab, enemy.position, Quaternion.identity);
+                    enemy.GetComponent<Enemy>().FireProjectile();
+                    //Instantiate(missilePrefab, enemy.position, Quaternion.identity);
                     break;
                 }
             }
@@ -153,6 +166,11 @@ public class EnemyGrid : MonoBehaviour
         columns = startingColumns;
         missileRate = startingMissileRate;
         booster = 0.0f;
+    }
+
+    public void SetRandomizeEnemies(bool value)
+    {
+        randomizeEnemyType = value;
     }
 
 }

@@ -18,11 +18,11 @@ public class Player : MonoBehaviour
         {
             horizontal = Input.GetAxisRaw("Horizontal");
 
-            if (horizontal >= 0.01f && transform.position.x <= 9.5f)
+            if (horizontal >= 0.01f && transform.position.x <= 15f)
             {
                 transform.position += Vector3.right * speed * Time.deltaTime;
             }
-            else if (horizontal <= -0.01f && transform.position.x >= -9.5f)
+            else if (horizontal <= -0.01f && transform.position.x >= -15f)
             {
                 transform.position -= Vector3.right * speed * Time.deltaTime;
             }

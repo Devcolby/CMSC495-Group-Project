@@ -71,23 +71,27 @@ public class GameManager : MonoBehaviour
                 enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 4:
+                enemyGrid.AddColumns(2);
                 enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 5:
-                enemyGrid.AddRow(1);
+                enemyGrid.AddColumns(2);
+                enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 6:
                 enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 7:
                 enemyGrid.AddRow(1);
-                enemyGrid.AddColumns(2);
+                enemyGrid.AddColumns(-1);
                 break;
             case 8:
                 enemyGrid.AddRow(1);
+                enemyGrid.SetRandomizeEnemies(true);
                 break;
             case 9:
-                enemyGrid.IncreaseBooster(0.5f);
+                enemyGrid.AddColumns(4);
+                enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 10:
                 // Final wave maybe boss?

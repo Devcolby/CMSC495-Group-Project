@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 4415714024920657117, guid: f5245c425b37f9947b53248f92d3032d, type: 3}
+    - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: animationSprites.Array.size
       value: 2
       objectReference: {fileID: 0}

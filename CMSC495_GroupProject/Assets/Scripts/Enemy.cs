@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] int health = 1;
+
     [SerializeField] Sprite[] animationSprites;
     [SerializeField] float animationTime = 1.0f;
+
+    [SerializeField] Projectile projectilePrefab;
 
     public System.Action Killed;
 
@@ -32,12 +36,22 @@ public class Enemy : MonoBehaviour
         spriteRenderer.sprite = animationSprites[currentAnimFrame];
     }
 
+    public void FireProjectile()
+    {
+        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Projectile"))
         {
-            Killed.Invoke();
-            Destroy(gameObject);
+            health--;
+
+            if (health <= 0)
+            {
+                Killed.Invoke();
+                Destroy(gameObject);
+            }
         }
     }
 }

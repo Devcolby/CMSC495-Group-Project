@@ -1,5 +1,5 @@
 #website.py
-''' Contribitors: Cole Sarno,
+''' Contribitors: Cole Sarno, 
     Program Description: The python file for the website
     Course: CMSC 495 6383 
     Class: Current Trends and Projects in Computer Science
@@ -12,6 +12,9 @@ from flask import render_template
 from flask import current_app as app
 
 app = Flask(__name__)
+
+gameUpdateList = [['Author', 'Date', 'Description'], ['Author', 'Date', 'Description'], ['Author', 'Date', 'Description']]
+
 @app.route('/')
 def index():
     '''
@@ -35,7 +38,7 @@ def game_updates():
     '''
     Brings user to the game updates page
     '''
-    return render_template('game_updates.html')
+    return render_template('game_updates.html', updateList=gameUpdateList)
 @app.route('/report_bug')
 def report_bug():
     '''

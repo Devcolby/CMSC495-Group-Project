@@ -59,7 +59,10 @@ def report_bug():
 @app.route('/web_player/')
 def web_player():
     '''
+<<<<<<< HEAD
     Brings user to the web player page
+=======
+    Brings user to the game web player
     '''
     return render_template('web_player.html')
 

@@ -53,5 +53,12 @@ def report_bug():
         bug_report.append(bug)
     return render_template('report_bug.html')
 
+@app.route('/web_player/')
+def web_player():
+    '''
+    Brings user to the game web player
+    '''
+    return render_template('web_player.html')
+
 if __name__ == "__main__":
     app.run()

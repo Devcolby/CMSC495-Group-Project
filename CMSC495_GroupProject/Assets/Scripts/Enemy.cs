@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float animationTime = 1.0f;
 
     [SerializeField] Projectile projectilePrefab;
+    [SerializeField] GameObject explosionPrefab;
 
     public System.Action Killed;
 
@@ -49,6 +50,7 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Killed.Invoke();
                 Destroy(gameObject);
             }

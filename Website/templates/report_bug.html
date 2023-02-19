@@ -34,11 +34,26 @@
 		</aside>
         <main>
             <h2>Please Fill In The Following Details</h2>
+			
+			<form method="post">
+				<table>
+				<tr>
+					<td><label for="date">Date (mm/dd/yyyy): </label></td>
+					<td><input name="date" id="date" required></td>
+				</tr>
+				<tr>
+					<td><label for="bug_desc">Description of bug: 
+					<textarea size="60" input name="bug_desc" id="bug_desc" required></textarea></label></td>
+					<!--<td> <input name="bug_desc" id="bug_desc" required></td>-->
+				</tr>
+				<tr>
+					<td colspan='1'><button type="submit" name="submit_button">Submit</button></td>
+				</tr>
+				</table>
+			</form>
 
-            <p>Date (mm/dd/yyyy):</p><input type="text" size="20" maxlength="100">
-
-            <p>Description of bug</p><textarea size="60"></textarea>
-            <button type="submit">Submit</button>
+            <!--<p>Description of bug</p><textarea size="60"></textarea>
+            <button type="submit">Submit</button>-->
         </main>
     </div>
 </body>

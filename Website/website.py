@@ -10,11 +10,13 @@ from datetime import datetime
 from flask import Flask
 from flask import render_template
 from flask import current_app as app
+from flask import request
+from flask import flash
 
 app = Flask(__name__)
 
 gameUpdateList = [['Author', 'Date', 'Description'], ['Author', 'Date', 'Description'], ['Author', 'Date', 'Description']]
-
+bug_report = []
 @app.route('/')
 def index():
     '''
@@ -39,11 +41,16 @@ def game_updates():
     Brings user to the game updates page
     '''
     return render_template('game_updates.html', updateList=gameUpdateList)
-@app.route('/report_bug')
+@app.route('/report_bug/', methods=['GET','POST'])
 def report_bug():
     '''
     Brings user to the report bug page
     '''
+    if request.method == "POST":
+        date = request.form["date"]
+        bug_desc = request.form["bug_desc"]
+        bug = date + bug_desc
+        bug_report.append(bug)
     return render_template('report_bug.html')
 
 if __name__ == "__main__":

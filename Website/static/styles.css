@@ -6,6 +6,12 @@
    Created: 02/07/2023
    Last Updated: 02/07/2023
 */
+/*Custom 8bit font*/
+@font-face { 
+	font-family: '8bit';
+	src: url('8bit.ttf'); 
+} 
+
 /* Formats all elements */
 *{
 	box-sizing: border-box;
@@ -86,6 +92,11 @@ footer{
 	color: white;
 	text-shadow: 1px 1px black;
 	background-color: black;
+}
+
+h1 {
+    font-family: '8bit';
+	font-size: 4.2em;
 }
 /* Adds borders around h2, h3, feature list and img elements */
 h2{

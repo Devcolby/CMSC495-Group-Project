@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum PowerUpType
+{
+    Shield,
+    Dual_Shots
+}
 public class GameManager : MonoBehaviour
 {
     [SerializeField] int lives = 3;

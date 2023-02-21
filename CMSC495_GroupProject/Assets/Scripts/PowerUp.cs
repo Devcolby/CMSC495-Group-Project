@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    [SerializeField] PowerUpType powerUpType;
     [SerializeField] Sprite[] animationSprites;
     [SerializeField] float animationTime = 1.0f;
 
@@ -19,4 +20,10 @@ public class PowerUp : MonoBehaviour
 
         spriteRenderer.sprite = animationSprites[currentAnimFrame];
     }
+
+    public PowerUpType GetPowerUpType()
+    {
+        return powerUpType;
+    }
+
 }

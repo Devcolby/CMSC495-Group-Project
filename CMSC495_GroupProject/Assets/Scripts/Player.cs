@@ -8,9 +8,15 @@ public class Player : MonoBehaviour
     [SerializeField] GameManager gameManager;
 
     [SerializeField] Projectile projectilePrefab;
+    [SerializeField] Projectile dualProjectile;
+    [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject shieldPrefab;
+
+
     bool projectileActive = false;
     float horizontal;
     bool paused = false;
+    bool poweredUp = false;
 
     private void Update()
     {
@@ -51,14 +57,56 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("EnemyProjectile"))
+        LayerMask layer = collision.gameObject.layer;
+
+        if (layer == LayerMask.NameToLayer("EnemyProjectile"))
         {
             gameManager.LooseLife();
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        } 
+        else if (layer == LayerMask.NameToLayer("PowerUp") && !poweredUp)
+        {
+            PowerUp powerUp = collision.gameObject.GetComponent<PowerUp>();
+            StartCoroutine(ActivatePowerUpCo(powerUp.GetPowerUpType()));
         }
     }
 
     public void SetPaused(bool value)
     {
         paused = value;
+    }
+
+    IEnumerator ActivatePowerUpCo(PowerUpType powerUpType)
+    {
+        poweredUp = true;
+
+        GameObject shield = null;
+        // Alter player values here
+        switch (powerUpType)
+        {
+            case PowerUpType.Shield:
+                // Shield power
+                shield = Instantiate(shieldPrefab, transform);
+                break;
+            case PowerUpType.Dual_Shots:
+                // Dual shots power
+                break;
+        }
+
+        // Wait for 10 seconds
+        yield return new WaitForSeconds(10f);
+
+        // Reset player values here
+        switch (powerUpType)
+        {
+            case PowerUpType.Shield:
+                Destroy(shield);
+                break;
+            case PowerUpType.Dual_Shots:
+
+                break;
+        }
+
+        poweredUp = false;
     }
 }

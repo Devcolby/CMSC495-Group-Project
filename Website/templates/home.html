@@ -18,6 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
  <body>
+<<<<<<< HEAD
 	<!-- The header section of the HTML document -->
 	<header>
 		<h1>Chromashot</h1>
@@ -31,6 +32,40 @@
 				<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
 				<li><a href={{url_for('about')}}>About</a></li>
 				<li><a href={{url_for('web_player')}}>Web Player</a></li>
+=======
+	 background: url("static/spaceBackground.png");
+	<!-- Used to differentiate the body content from the background image -->
+	<div class="bg">
+		<header>
+			<h1>Chromashot</h1>
+		</header>
+		<aside>
+			<!-- Navigation links to different website pages -->
+			<nav id="nav_list">
+				<ul>
+					<li><a href ={{url_for('home')}}>Homepage</a></li>
+					<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+					<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+					<li><a href={{url_for('about')}}>About</a></li>
+					<li><a href={{url_for('web_player')}}>Web Player</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<h3>Welcome to the Homepage!</h3>
+			<br />
+
+			<h2>Chromashot</h2>
+			<p>In the world of outerspace, the chroma needs to shoot the bad guys to advance to the next level. 
+			The villains include the minor alien and the lightbulb alien. As the levels get harder, the chroma will need to shoot twice to get rid of the red lightbulb aliens. Towards the end of the game, the chroma will enter the boss battle where it gets real competitive. The chroma will only have 3 lives in the entire duration of the game. Will the chroma survive, or will the chroma be annihilated?</p>
+			<img src="/static/images/wave 3.jpg" style="width:300px;height:400px;">
+			<h3>Game Features</h3>
+			<ul id="f_li">
+				<li>Arcade Style Gameplay</li>
+				<li>[Game Features go here]</li>
+				<li>[Game Features go here]</li>
+				<li>[Game Features go here]</li>
+>>>>>>> 538a7097ec4a3e3d1d86c6fe1229c43916ee9d53
 			</ul>
 		</nav>
 	</aside>

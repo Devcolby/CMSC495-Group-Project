@@ -14,6 +14,7 @@
    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
  </head>
+<<<<<<< HEAD
  <body>
     <header>
 		<h1>Chromashot</h1>
@@ -32,6 +33,28 @@
 	</aside>
     <main>
         <h2>Please Fill In The Following Details</h2>
+=======
+<body>
+    background: url("static/spaceBackground.png");
+    <!-- Used to differentiate the body content from the background image -->
+	<div class="bg">
+        <header>
+			<h1>Chromashot</h1>
+		</header>
+        <aside>
+        <!-- Navigation links to different website pages -->
+			<nav id="nav_list">
+				<ul>
+					<li><a href ={{url_for('home')}}>Homepage</a></li>
+					<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+					<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+					<li><a href={{url_for('about')}}>About</a></li>
+				</ul>
+			</nav>
+		</aside>
+        <main>
+            <h2>Please Fill In The Following Details</h2>
+>>>>>>> 538a7097ec4a3e3d1d86c6fe1229c43916ee9d53
 			
 		<form method="post">
 			<table>
@@ -60,5 +83,14 @@
         <button type="submit">Submit</button>-->
     </main>
 
+<<<<<<< HEAD
  </body>
 </html>
+=======
+            <!--<p>Description of bug</p><textarea size="60"></textarea>
+            <button type="submit">Submit</button>-->
+        </main>
+    </div>
+</body>
+</html>
+>>>>>>> 538a7097ec4a3e3d1d86c6fe1229c43916ee9d53

@@ -7,54 +7,58 @@
 	Created: 02/12/2023
     Last Updated: 02/12/2023
 -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
    <title>Report Bug</title>
+   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
  </head>
-<body>
-    <!-- Used to differentiate the body content from the background image -->
-	<div class="bg">
-        <header>
-			<h1>Chromashot</h1>
-		</header>
-        <aside>
-        <!-- Navigation links to different website pages -->
-			<nav id="nav_list">
-				<ul>
-					<li><a href ={{url_for('home')}}>Homepage</a></li>
-					<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
-					<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
-					<li><a href={{url_for('about')}}>About</a></li>
-				</ul>
-			</nav>
-		</aside>
-        <main>
-            <h2>Please Fill In The Following Details</h2>
+ <body>
+    <header>
+		<h1>Chromashot</h1>
+	</header>
+    <aside>
+		<!-- Navigation links to different website pages -->
+		<nav id="nav_list">
+			<ul>
+				<li><a href ={{url_for('home')}}>Homepage</a></li>
+				<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+				<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+				<li><a href={{url_for('about')}}>About</a></li>
+				<li><a href={{url_for('web_player')}}>Web Player</a></li>
+			</ul>
+		</nav>
+	</aside>
+    <main>
+        <h2>Please Fill In The Following Details</h2>
 			
-			<form method="post">
-				<table>
-				<tr>
-					<td><label for="date">Date (mm/dd/yyyy): </label></td>
-					<td><input name="date" id="date" required></td>
-				</tr>
-				<tr>
-					<td><label for="bug_desc">Description of bug: 
-					<textarea size="60" input name="bug_desc" id="bug_desc" required></textarea></label></td>
-					<!--<td> <input name="bug_desc" id="bug_desc" required></td>-->
-				</tr>
-				<tr>
-					<td colspan='1'><button type="submit" name="submit_button">Submit</button></td>
-				</tr>
-				</table>
-			</form>
+		<form method="post">
+			<table>
+			<tr>
+				<td><label for="date">Date (mm/dd/yyyy): </label></td>
+				<td><input name="date" id="date" required></td>
+			</tr>
+			<tr>
+				<td><label for="bug_desc">Description of bug: 
+				<textarea size="60" input name="bug_desc" id="bug_desc" required></textarea></label></td>
+				<!--<td> <input name="bug_desc" id="bug_desc" required></td>-->
+			</tr>
+			<tr>
+				<td colspan='1'><button type="submit" name="submit_button">Submit</button></td>
+			</tr>
+			</table>
+		</form>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<p class="error">{{ message }}</p>
+			{% endfor %}
+		{% endif %}
+		{% endwith %}
+        <!--<p>Description of bug</p><textarea size="60"></textarea>
+        <button type="submit">Submit</button>-->
+    </main>
 
-            <!--<p>Description of bug</p><textarea size="60"></textarea>
-            <button type="submit">Submit</button>-->
-        </main>
-    </div>
-</body>
+ </body>
 </html>

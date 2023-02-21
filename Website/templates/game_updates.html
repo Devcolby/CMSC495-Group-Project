@@ -7,39 +7,37 @@
 	Created: 02/12/2023
     Last Updated: 02/12/2023
 -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
    <title>Game Updates</title>
+   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
  </head>
-<body>
-    <!-- Used to differentiate the body content from the background image -->
-	<div class="bg">
-        <header>
-			<h1>Chromashot</h1>
-		</header>
-        <aside>
+ <body>
+    <header>
+		<h1>Chromashot</h1>
+	</header>
+    <aside>
         <!-- Navigation links to different website pages -->
-			<nav id="nav_list">
-				<ul>
-					<li><a href ={{url_for('home')}}>Homepage</a></li>
-					<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
-					<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
-					<li><a href={{url_for('about')}}>About</a></li>
-				</ul>
-			</nav>
-		</aside>
-        <main>
-            <h2>Game Updates</h2>
-            
-            {% for update in updateList %}
-                <h3>{{ update }}</h3>
-                {{ update.date }}
-                {{ update.description }}
-            {% endfor %}
+		<nav id="nav_list">
+			<ul>
+				<li><a href ={{url_for('home')}}>Homepage</a></li>
+				<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+				<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+				<li><a href={{url_for('about')}}>About</a></li>
+				<li><a href={{url_for('web_player')}}>Web Player</a></li>
+			</ul>
+		</nav>
+	</aside>
+    <main>
+        <h2>Game Updates</h2>
+        
+        {% for update in updateList %}
+            <h3>{{ update }}</h3>
+            {{ update.date }}
+			{{ update.description }}
+        {% endfor %}
             
             <!--
             <div class="post">
@@ -58,7 +56,6 @@
                 <p>This is an example of the format for the game updates.</p>
             </div>
         -->
-        </main>
-    </div>
-</body>
+    </main>
+ </body>
 </html>

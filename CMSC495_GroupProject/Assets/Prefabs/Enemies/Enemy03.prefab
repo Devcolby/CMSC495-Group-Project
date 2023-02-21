@@ -12,6 +12,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: animationTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 7106719460749496835, guid: 3631b43c96f95e948aec7c0f2792a87b, type: 3}
+    - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 4415714024920657117, guid: e78639e39bc1c094cbbae8648b379eaf, type: 3}
+    - target: {fileID: 898925303, guid: 01fe5ecef1469a045bce14ee51394386, type: 3}
       propertyPath: animationSprites.Array.size
       value: 2
       objectReference: {fileID: 0}

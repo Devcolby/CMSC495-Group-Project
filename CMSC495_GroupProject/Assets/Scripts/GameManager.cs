@@ -86,15 +86,15 @@ public class GameManager : MonoBehaviour
                 enemyGrid.AddColumns(-1);
                 break;
             case 8:
-                enemyGrid.AddRow(1);
                 enemyGrid.SetRandomizeEnemies(true);
                 break;
             case 9:
-                enemyGrid.AddColumns(4);
+                enemyGrid.AddRow(1);
                 enemyGrid.IncreaseBooster(0.25f);
                 break;
             case 10:
                 // Final wave maybe boss?
+
                 break;
         }
     }

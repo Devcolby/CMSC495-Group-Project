@@ -14,23 +14,12 @@
    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
  </head>
-<<<<<<< HEAD
  <body>
     <header>
-		<h1>Chromashot</h1>
+			<h1>Chromashot</h1>
 	</header>
     <aside>
-=======
-<body>
-     background: url("static/spaceBackground.png");	
-    <!-- Used to differentiate the body content from the background image -->
-	<div class="bg">
-        <header>
-			<h1>Chromashot</h1>
-		</header>
-        <aside>
->>>>>>> 538a7097ec4a3e3d1d86c6fe1229c43916ee9d53
-        <!-- Navigation links to different website pages -->
+		<!-- Navigation links to different website pages -->
 		<nav id="nav_list">
 			<ul>
 				<li><a href ={{url_for('home')}}>Homepage</a></li>
@@ -43,37 +32,17 @@
 	</aside>
     <main>
         <h2>Game Updates</h2>
-        
-        {% for update in updateList %}
-            <h3>{{ update }}</h3>
-            {{ update.date }}
-			{{ update.description }}
-        {% endfor %}
-            
-            <!--
-            <div class="post">
-                <h3>Name: Cole Sarno</h3>
-                <h3>Date: 02/12/2023</h3>
-                <h3>Description: Update on Web Development</h3>
-                <p>The links on the website are now all live! Pages for Game Updates
-                and to Report Bugs are available. We are working hard on filling in
-                the content for the Home and About pages. The Report Bug feature is
-                also being implemented soon.</p>
-            </div>
-            <div class="post">
-                <h3>Name: Cole Sarno </h3>
-                <h3>Date: 02/11/2023</h3>
-                <h3>Description: Example Update</h3>
-                <p>This is an example of the format for the game updates.</p>
-            </div>
-        -->
-<<<<<<< HEAD
-    </main>
+		
+        {% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p>{{ message}}</p>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+	</main>
+	<footer>
+			<p>Created by: Group 1, go to the <a href={{url_for('about')}}>About Page</a> for more information.</p>
+	</footer>
  </body>
 </html>
-=======
-        </main>
-    </div>
-</body>
-</html>
->>>>>>> 538a7097ec4a3e3d1d86c6fe1229c43916ee9d53

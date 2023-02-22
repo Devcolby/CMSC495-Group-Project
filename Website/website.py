@@ -9,17 +9,22 @@
 #New imports re, string
 import re
 import string
-
+#Imports os and sys for file processing
+import os
+import sys
 from datetime import datetime
 from flask import Flask
 from flask import render_template
 from flask import current_app as app
 from flask import request
 from flask import flash
+#For reading csv file
+import pandas as pd
 
 bug_report = []
 
 app = Flask(__name__)
+app.secret_key = 'secret_key'
 @app.route('/')
 def index():
     '''
@@ -43,6 +48,12 @@ def game_updates():
     '''
     Brings user to the game updates page
     '''
+    success, err_msg, ls = read_update_file()
+    if not success:
+        flash(err_msg)
+    else:
+        for i in ls:
+            flash(i)
     return render_template('game_updates.html')
 @app.route('/report_bug/', methods=['GET','POST'])
 def report_bug():
@@ -50,21 +61,66 @@ def report_bug():
     Brings user to the report bug page
     '''
     if request.method == "POST":
-        date = request.form["date"]
+        date_time = datetime.now()
+        date = date_time.strftime("%A %B %d %Y")
+        time = date_time.strftime("%I:%M:%S PM")
+        ip_address = request.remote_addr
         bug_desc = request.form["bug_desc"]
-        bug = date + bug_desc
-        bug_report.append(bug)
+        bug_report.append(date)
+        bug_report.append(time)
+        bug_report.append(ip_address)
+        bug_report.append(bug_desc)
+        success, err_msg = write_bug_report(bug_report)
+        if success:
+            flash("Your bug has been successfully reported!")
+        if not success:
+            flash(err_msg)
     return render_template('report_bug.html')
 
 @app.route('/web_player/')
 def web_player():
     '''
-<<<<<<< HEAD
     Brings user to the web player page
-=======
-    Brings user to the game web player
     '''
     return render_template('web_player.html')
 
+def read_update_file():
+    err_msg = ""
+    ls = []
+    success = False
+    update_path = os.path.join(sys.path[0] + "\\" + "game_updates.csv")
+    if not os.path.exists(update_path):
+        success = False
+        err_msg = "Error: Could not access Game Updates"
+    else:
+        with open(update_path, "r", encoding='utf-8') as read_file:
+            data = pd.read_csv(read_file)
+        for i in range(len(data)):
+            date = data["date"].iloc[i]
+            developer = data["developer"].iloc[i]
+            update = data["update"].iloc[i]
+            ls.append(date)
+            ls.append(developer)
+            ls.append(update)
+            if not ls:
+                err_msg = "Error: No Game Updates were Found"
+            else:
+                success = True
+    return success, err_msg, ls
+def write_bug_report(bug_report):
+    success = False
+    err_msg = ""
+    report_path = os.path.join(sys.path[0] + "\\" + "bug_report.csv")
+    try:
+        with open(report_path, "a", encoding='utf-8') as write_file:
+            for i in bug_report:
+                write_file.writelines(i + ",")
+            write_file.writelines("\n")
+        success = True
+    except FileNotFoundError as e:
+        print(e)
+        err_msg = "Error: Cannot report bugs at this time"
+    return success, err_msg
+    
 if __name__ == "__main__":
     app.run()

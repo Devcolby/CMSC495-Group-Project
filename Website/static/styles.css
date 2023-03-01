@@ -4,7 +4,7 @@
    Course: CMSC 495 6383 
    Class: Current Trends and Projects in Computer Science
    Created: 02/07/2023
-   Last Updated: 02/21/2023
+   Last Updated: 03/01/2023
 */
 /*Custom 8bit font*/
 @font-face { 
@@ -17,16 +17,6 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-
-/* Formatting for regular laptop/desktop screens */
-@media only screen and (min-width: 992px){
-
-}
-
-/* Formatting for tablet/phone screens */
-@media only screen and (max-width: 992px){
-
 }
 
 
@@ -45,18 +35,19 @@
 	display: block;
 	padding: 0.5em .5em .5em .5em;
 	text-decoration: none;
-	background-color: white;
+	background-color: blue;
 	font-weight: bold;
-	color: black;
-	border: 1px solid black;
+	color: white;
+	border: 2px outset white;
+	text-shadow: 2px 2px black;
 }
 /* Makes it so the last button does not have a margin*/
 #nav_list ul li.lastitem{ 
 	margin-right: none
 }
-/* Makes it so when you hover over a button it turns from white to yellow */
+/* Makes it so when you hover over a button it turns from blue to red */
 #nav_list ul li a:hover{
-	background-color: yellow;
+	background-color: red;
 }
 
 
@@ -73,18 +64,11 @@ body{
 /* Formatting for header */
 header{
 	text-align: center;
-	background-color: white;
-	padding: 15px 1.5625%;
-	border: 1px solid black;
 }
 /* Formatting for main */
 main{
-	/*margin-right: 10%;*/
 	max-width: 1024px;
 	background-color: white;
-	/*position: absolute;
-	display: inline-block;*/
-	
 	float: left;
 	width: 100%;
 	padding: 15px 1.5625%;
@@ -104,12 +88,18 @@ footer{
 	border-top: 2px solid black;
 	color: white;
 	text-shadow: 1px 1px black;
-	background-color: black;
+}
+
+/* Used to format the fonts used by the majority of text */
+h1, h2, h3, h4, p, li{
+	font-family: '8bit', Verdana, Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-family: '8bit';
+	font-style: italic;
 	font-size: 4.2em;
+	color: white;
+	text-shadow: 2px 2px red;
 }
 /* Adds borders around h2, h3, feature list and img elements */
 h2{
@@ -127,15 +117,12 @@ ul#f_li{
 img{
 	padding: 15px 1.5625%;
 }
-/* Used to create a white box around the body content 
-div.bg{
-	margin-right: 10%;
-	max-width: 1024px;
-	background-color: white;
-	position: absolute;
-	display: inline-block;
-	border: 1px solid black;
-}*/
+textarea{
+	height: auto;
+	resize: none;
+	width: 100%;
+}
+
 div.post{
     background-color: black;
     border: 3px solid blue;

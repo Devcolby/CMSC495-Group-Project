@@ -20,6 +20,7 @@ from flask import request
 from flask import flash
 #For reading csv file
 import pandas as pd
+import numpy as np
 
 bug_report = []
 
@@ -44,19 +45,17 @@ def about():
     '''
     return render_template('about.html')
 @app.route('/game_updates/')
-def game_updates():
+def game_updates(update_ls=None):
     '''
     Brings user to the game updates page
     '''
     success, err_msg, ls = read_update_file()
+    update_ls = reversed(ls)
     if not success:
         flash(err_msg)
-    else:
-        for i in ls:
-            flash(i)
-    return render_template('game_updates.html')
+    return render_template('game_updates.html', update_ls=update_ls)
 @app.route('/report_bug/', methods=['GET','POST'])
-def report_bug():
+def report_bug(success_msg=None):
     '''
     Brings user to the report bug page
     '''
@@ -72,10 +71,10 @@ def report_bug():
         bug_report.append(bug_desc)
         success, err_msg = write_bug_report(bug_report)
         if success:
-            flash("Your bug has been successfully reported!")
+            success_msg = "Your bug has been successfully reported!"
         if not success:
             flash(err_msg)
-    return render_template('report_bug.html')
+    return render_template('report_bug.html', success_msg=success_msg)
 
 @app.route('/web_player/')
 def web_player():
@@ -95,14 +94,8 @@ def read_update_file():
     else:
         with open(update_path, "r", encoding='utf-8') as read_file:
             data = pd.read_csv(read_file)
-        for i in range(len(data)):
-            date = data["date"].iloc[i]
-            developer = data["developer"].iloc[i]
-            update = data["update"].iloc[i]
-            ls.append(date)
-            ls.append(developer)
-            ls.append(update)
-            if not ls:
+            ls = np.array(data)
+            if len(ls) == 0:
                 err_msg = "Error: No Game Updates were Found"
             else:
                 success = True

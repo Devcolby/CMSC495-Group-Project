@@ -32,11 +32,19 @@
 	</aside>
     <main>
         <h2>Game Updates</h2>
+		{% if update_ls %}
+			{% for ls in update_ls %}
+				{% for u in ls %}
+					<p>{{u}}</p>
+				{% endfor %}
+				<hr>
+			{% endfor %}
+		{% endif %}
 		
         {% with messages = get_flashed_messages() %}
 			{% if messages %}
 				{% for message in messages %}
-					<p>{{ message}}</p>
+					<p class="error">{{ message}}</p>
 				{% endfor %}
 			{% endif %}
 		{% endwith %}

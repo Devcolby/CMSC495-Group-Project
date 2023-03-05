@@ -45,10 +45,14 @@
 			</tr>
 			</table>
 		</form>
+		{% if success_msg %}
+			<p>{{ success_msg }}</p>
+		{% endif %}
+		
 		{% with messages = get_flashed_messages() %}
 		{% if messages %}
 			{% for message in messages %}
-				<p>{{ message }}</p>
+				<p class="error">{{ message }}</p>
 			{% endfor %}
 		{% endif %}
 		{% endwith %}

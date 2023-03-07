@@ -19,11 +19,7 @@
  </head>
  <body>
 		<header>
-			<div style="display: inline;">
-				<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
-   			<h1 style="display: inline;">Web Player</h1>
-			   <img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
- 			</div>
+   			<h1>Web Player</h1>
 		</header>
 		<aside>
         <!-- Navigation links to different website pages -->
@@ -38,13 +34,19 @@
 			</nav>
 		</aside>
 		<main>
+			<h2>
+				<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+				Web Player
+				<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+			</h2>
+			<!-- The frame that allows the user to play the game in-browser -->
 			<iframe frameborder="0" src="https://itch.io/embed-upload/7464693?color=333333" allowfullscreen="" width="1024" height="788">
+				<!-- Link to the Chromashot project on game hosting service itch.io -->
 				<a href="https://devcolby.itch.io/chromashot">Play Chromashot on itch.io</a>
 			</iframe>
 		</main>	
 		<footer>
 			<p>Created by: Group 1, go to the <a href={{url_for('about')}}>About Page</a> for more information.</p>
 		</footer>
-
  </body>
 </html>

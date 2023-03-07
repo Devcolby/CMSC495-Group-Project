@@ -1,0 +1,146 @@
+/* styles.css */
+/* Contribitors: Cole Sarno, 
+   Program Description: CSS stylesheet for website
+   Course: CMSC 495 6383 
+   Class: Current Trends and Projects in Computer Science
+   Created: 02/07/2023
+   Last Updated: 03/05/2023
+*/
+/*Custom 8bit fonts*/
+@font-face { 
+	font-family: '8bit';
+	src: url('8bit.ttf'); 
+}
+@font-face { 
+	font-family: '8bit-bold';
+	src: url('8bit-bold.ttf');
+}
+
+/* Formats all elements */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Formats navigation list */
+#nav_list ul{
+	list-style-type: none;
+	padding: 1em 0;
+}
+#nav_list ul li{
+	margin-right:1%;
+	float: left;
+}
+/* Creates a button for each link in nav_list */
+#nav_list ul li a{
+	text-align: center;
+	display: block;
+	padding: 0.5em .5em .5em .5em;
+	text-decoration: none;
+	background-color: blue;
+	font-weight: bold;
+	color: white;
+	border: 2px outset white;
+	text-shadow: 2px 2px black;
+}
+/* Makes it so the last button does not have a margin*/
+#nav_list ul li.lastitem{ 
+	margin-right: none
+}
+/* Makes it so when you hover over a button it turns from blue to red */
+#nav_list ul li a:hover{
+	background-color: red;
+}
+
+
+/* Formatting for body  */
+body{
+	width: 90%;
+	max-width: 1024px;
+	margin: 0 auto;
+	background-image: url("spaceBackground.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* Formatting for header */
+header{
+	text-align: center;
+}
+/* Formatting for main */
+main{
+	max-width: 1024px;
+	background-color: white;
+	float: left;
+	width: 100%;
+	padding: 15px 1.5625%;
+	margin-right: 2em;
+	border: 1px solid black;
+}
+/* Formatting for aside (nav menu) */
+aside{
+	width: 100%;
+	float: left;
+	padding:15px 1.5625%;
+}
+/* Formatting for footer */
+footer{
+	clear: both;
+	padding: 15px 1.5625%;
+	border-top: 2px solid black;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+/* Used to format the fonts used by the majority of text */
+h1, h2, h3, h4{
+	font-family: '8bit-bold', Verdana, Arial, Helvetica, sans-serif;
+}
+ p, li{
+	font-family: '8bit', Verdana, Arial, Helvetica, sans-serif; 
+ }
+
+h1 {
+	font-style: italic;
+	font-size: 4.2em;
+	color: white;
+	text-shadow: 2px 2px red;
+}
+/* Adds borders around h2, h3, feature list and img elements */
+h2{
+	border-bottom: 1px solid black;
+}
+h3{
+	border-bottom: 1px solid black;
+}
+p.error {
+	color: red;
+}
+ul#f_li{
+	padding-left: 30px;
+}
+img{
+	padding: 15px 1.5625%;
+}
+textarea{
+	height: auto;
+	resize: none;
+	width: 100%;
+}
+
+div.post{
+    background-color: black;
+    border: 3px solid blue;
+    margin: 0.5em .5em .5em .5em;
+    padding: 15px 1.5625%;
+}
+div.post p, div.post h3{
+    color: white;
+}
+iframe {
+	width: 100%;
+	/*resize: both;
+	overflow: auto;*/
+}

@@ -1,0 +1,70 @@
+<!-- home.html -->
+<!--
+	Contribitors: Cole Sarno, Sairam Soundararajan
+    Program Description: Website homepage document
+	Course: CMSC 495 6383 
+    Class: Current Trends and Projects in Computer Science
+	Created: 02/06/2023
+    Last Updated: 03/01/2023
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+ <head>
+	<title>Homepage</title>
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<meta charset="utf-8">
+	<!-- For mobile compatibility and scaling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+	<!-- The header section of the HTML document -->
+	<header>
+		<div style="display: inline;">
+		<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+    		<h1 style="display: inline;">Chromashot</h1>
+    	<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+ 	</div>
+	</header>
+	<aside>
+		<!-- Navigation links to different website pages -->
+		<nav id="nav_list">
+			<ul>
+				<li><a href ={{url_for('home')}}>Homepage</a></li>
+				<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+				<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+				<li><a href={{url_for('about')}}>About</a></li>
+				<li><a href={{url_for('web_player')}}>Web Player</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<main>
+		<h3>Welcome to the Homepage!</h3>
+		<br />
+
+		<h2>Chromashot</h2>
+		<p>In the world of outerspace, the chroma needs to shoot the bad guys to advance to the next level. 
+			The villains include the minor alien and the lightbulb alien. As the levels get harder, 
+			the chroma will need to shoot twice to get rid of the red lightbulb aliens. 
+			Towards the end of the game, the chroma will enter the boss battle where it gets real competitive. 
+			The chroma will only have 3 lives in the entire duration of the game. 
+			Will the chroma survive, or will the chroma be annihilated?
+		</p>
+		<img src="{{ url_for('static', filename='wave3.jpg')}}" style="width:640px;height:480px;">
+		<h3>Game Features</h3>
+		<ul id="f_li">
+			<li>Arcade Style Gameplay</li>
+			<li>Gameplay Gets Progressively Harder</li>
+			<li>Custom-made Music and Art</li>
+			<li>Playable on for Download on Windows and in-browser on the <a href={{url_for('web_player')}}>Web Player</a> page</li>
+		</ul>
+		<br />
+
+		<h3 class="home">Download Link</h3>
+		<p><a href="{{ url_for('static', filename='Chromashot_Windows64.zip') }}" download="Chromashot_Windows64">Download Chromashot for Windows</a></p>
+	</main>
+	<footer>
+		<p>Created by: Group 1, go to the <a href={{url_for('about')}}>About Page</a> for more information.</p>
+	</footer>
+ </body>
+</html>

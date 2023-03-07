@@ -1,0 +1,63 @@
+<!-- home.html -->
+<!--
+	Contribitors: Cole Sarno, Sairam Soundararajan
+    Program Description: Website homepage document
+	Course: CMSC 495 6383
+    Class: Current Trends and Projects in Computer Science
+	Created: 02/06/2023
+    Last Updated: 02/12/2023
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+ <head>
+	<title>About</title>
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<meta charset="utf-8">
+	<!-- For mobile compatibility and scaling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+	<header>
+		<div style="display: inline;">
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+    		<h1 style="display: inline;">About</h1>
+    		<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+ 	</div>
+	</header>
+	<aside>
+        <!-- Navigation links to different website pages -->
+		<nav id="nav_list">
+			<ul>
+				<li><a href ={{url_for('home')}}>Homepage</a></li>
+				<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+				<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+				<li><a href={{url_for('about')}}>About</a></li>
+				<li><a href={{url_for('web_player')}}>Web Player</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<main>
+		<h3>Colby Snodgrass</h3>
+       <p>My role in this project is to design and program the game. The game is made in the Unity Game Engine, 
+			using C# as the programming language. I have been making games for over 5 years now 
+			ranging from first person shooters to adventure RPGs.
+		</p>
+		<br />
+        <h3>Cole Sarno</h3>
+        <p>I am the lead web developer for the Chromashot website. I have an associate's degree in Web Development, 
+			and have knowledge of many different coding languages. For this project we used HTML, CSS, and Python.</p>
+		<br />
+        <h3>Sairam Soundararajan </h3>
+        <p>I am the music producer and assistant web developer for the Chromashot project. I work with Python and Java. 
+			I sing and compose music.</p>
+		<br />
+        <h3>Joseph Thill</h3>
+        <p>A mechanic from sunny southern California</p>
+		<br />
+        <h3>David Toyloy</h3>
+        <p>Program testing and functionality review for website and downloadable application.</p>
+	</main>
+
+ </body>
+</html>

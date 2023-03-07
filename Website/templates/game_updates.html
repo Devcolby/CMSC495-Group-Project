@@ -5,22 +5,22 @@
 	Course: CMSC 495 6383
     Class: Current Trends and Projects in Computer Science
 	Created: 02/12/2023
-    Last Updated: 02/12/2023
+    Last Updated: 03/07/2023
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
    <title>Game Updates</title>
+   <!-- Links to the favicon and stylesheet files -->
    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+   <meta charset="utf-8">
+	<!-- For mobile compatibility and scaling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
  <body>
     <header>
-			<div style="display: inline;">
-				<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
-    			<h1 style="display: inline;">Game Updates</h1>
-    			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
- 			</div>
+    	<h1>Game Updates</h1>
 	</header>
     <aside>
 		<!-- Navigation links to different website pages -->
@@ -35,19 +35,33 @@
 		</nav>
 	</aside>
     <main>
-        <h2>Game Updates</h2>
+        <h2>
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+			Game Updates
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+		</h2>
+		
+		<!-- Checks if the update list(update_ls) is populated -->
 		{% if update_ls %}
+			<!-- Iterates through each list(ls) in the 2D update list(update_ls) -->
 			{% for ls in update_ls %}
+				<!-- Iterates through each update(u) in the list(ls) -->
 				{% for u in ls %}
+					<!-- Displays the update -->
 					<p>{{u}}</p>
 				{% endfor %}
+				<!-- Adds a horizontal line between each update -->
 				<hr>
 			{% endfor %}
 		{% endif %}
 		
+		<!-- Checks for flashed messages -->
         {% with messages = get_flashed_messages() %}
+			<!-- If there are any flashed messages displays each message -->
 			{% if messages %}
+				<!-- Iterates through each message in messages -->
 				{% for message in messages %}
+					<!-- Displays each message with the error red font -->
 					<p class="error">{{ message}}</p>
 				{% endfor %}
 			{% endif %}

@@ -1,11 +1,11 @@
 <!-- home.html -->
 <!--
-	Contribitors: Cole Sarno, Sairam Soundararajan
+	Contributors: Cole Sarno, Sairam Soundararajan
     Program Description: Website homepage document
 	Course: CMSC 495 6383 
     Class: Current Trends and Projects in Computer Science
 	Created: 02/06/2023
-    Last Updated: 03/01/2023
+    Last Updated: 03/07/2023
 -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -20,11 +20,7 @@
  <body>
 	<!-- The header section of the HTML document -->
 	<header>
-		<div style="display: inline;">
-		<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
-    		<h1 style="display: inline;">Chromashot</h1>
-    	<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
- 	</div>
+    	<h1>Chromashot</h1>
 	</header>
 	<aside>
 		<!-- Navigation links to different website pages -->
@@ -41,8 +37,11 @@
 	<main>
 		<h3>Welcome to the Homepage!</h3>
 		<br />
-
-		<h2>Chromashot</h2>
+		<h2>
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+			Chromashot
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+		</h2>
 		<p>In the world of outerspace, the chroma needs to shoot the bad guys to advance to the next level. 
 			The villains include the minor alien and the lightbulb alien. As the levels get harder, 
 			the chroma will need to shoot twice to get rid of the red lightbulb aliens. 
@@ -50,8 +49,13 @@
 			The chroma will only have 3 lives in the entire duration of the game. 
 			Will the chroma survive, or will the chroma be annihilated?
 		</p>
-		<img src="{{ url_for('static', filename='wave3.jpg')}}" style="width:640px;height:480px;">
-		<h3>Game Features</h3>
+		<img src="{{ url_for('static', filename='wave3.jpg')}}" style="width:640px;height:480px;" id="homepage">
+		
+		<h3>
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+			Game Features
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+		</h3>
 		<ul id="f_li">
 			<li>Arcade Style Gameplay</li>
 			<li>Gameplay Gets Progressively Harder</li>
@@ -60,7 +64,11 @@
 		</ul>
 		<br />
 
-		<h3 class="home">Download Link</h3>
+		<h3 class="home">
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+			Download Link
+			<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+		</h3>
 		<p><a href="{{ url_for('static', filename='Chromashot_Windows64.zip') }}" download="Chromashot_Windows64">Download Chromashot for Windows</a></p>
 	</main>
 	<footer>

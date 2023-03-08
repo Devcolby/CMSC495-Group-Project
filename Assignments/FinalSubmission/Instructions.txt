@@ -1,0 +1,21 @@
+Submission for CMSC450 Final Project
+
+Documentation folder contains our project plan, design document, test plan, and user guide.
+
+Windows 64 Download
+To download the windows game unzip the "Chromashot_Windows64" folder to somewhere on your computer. It is important to keep all 
+the files that are unzipped in the same folder.
+Once it is unzipped go to the contents and simply run the Chromashot executable.
+
+Website
+The website for this project has also been provided in the Website folder.
+This will need to be run on a test server to see it. Open the website.py file within the website folder in your preferred IDE and run that file.
+Once the test server is up go to the link provided in your console to see the website.
+
+Issues Running Test Server
+Make sure to install flask if you haven't using "pip install Flask" in your console.
+Make sure to also install pandas if you haven't using "pip install pandas" in your console.
+Make sure to also install numpy if you haven't using "pip install numpy" in your console.
+
+Web Player Version is also available via this link: https://devcolby.itch.io/chromashot
+GitHub Link: https://github.com/Devcolby/CMSC495-Group-Project

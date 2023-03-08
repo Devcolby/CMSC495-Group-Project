@@ -1,0 +1,153 @@
+/* styles.css */
+/* Contribitors: Cole Sarno, 
+   Program Description: CSS stylesheet for website
+   Course: CMSC 495 6383 
+   Class: Current Trends and Projects in Computer Science
+   Created: 02/07/2023
+   Last Updated: 03/07/2023
+*/
+
+/*** CSS for all web pages ***/
+
+/** Formatting for all elements **/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/** Custom 8bit fonts **/
+/* Regular 8bit font */
+@font-face { 
+	font-family: '8bit';
+	src: url('8bit.ttf'); 
+}
+/* Bold 8-bit font */
+@font-face { 
+	font-family: '8bit-bold';
+	src: url('8bit-bold.ttf');
+}
+
+/** Formatting for navigation list **/
+/* Formats navigation list */
+#nav_list ul{
+	list-style-type: none;
+	padding: 1em 0;
+}
+/* Formats navigation list elements */
+#nav_list ul li{
+	margin-right:1%;
+	float: left;
+}
+/* Formats buttons for each link in the navigation list */
+#nav_list ul li a{
+	text-align: center;
+	display: block;
+	padding: 0.5em .5em .5em .5em;
+	text-decoration: none;
+	background-color: blue;
+	font-weight: bold;
+	color: white;
+	border: 2px outset white;
+	text-shadow: 2px 2px black;
+}
+/* Makes it so the last button does not have a margin*/
+#nav_list ul li.lastitem{ 
+	margin-right: none
+}
+/* Makes it so when you hover over a button it turns from blue to red */
+#nav_list ul li a:hover{
+	background-color: red;
+}
+/** Formatting for aside (nav menu) **/
+aside{
+	width: 100%;
+	float: left;
+	padding:15px 1.5625%;
+}
+
+/** Formatting for body  **/
+body{
+	width: 90%;
+	max-width: 1024px;
+	margin: 0 auto;
+	background-image: url("spaceBackground.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/** Formatting for header **/
+header{
+	text-align: center;
+}
+
+/** Formatting for main **/
+main{
+	max-width: 1024px;
+	background-color: white;
+	float: left;
+	width: 100%;
+	padding: 15px 1.5625%;
+	margin-right: 2em;
+	border: 1px solid black;
+}
+
+/* Formatting for footer */
+footer{
+	clear: both;
+	padding: 15px 1.5625%;
+	border-top: 2px solid black;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+/** Text formatting **/
+/* Used to format the fonts for the headers */
+h1, h2, h3, h4{
+	font-family: '8bit-bold', Verdana, Arial, Helvetica, sans-serif;
+}
+/* Used to format the fonts for the paragraph content and nav list elements */
+p, li{
+	font-family: '8bit', Verdana, Arial, Helvetica, sans-serif; 
+ }
+/* Formats the main header(h1) of the page */
+h1 {
+	font-style: italic;
+	font-size: 4.2em;
+	color: white;
+	text-shadow: 2px 2px red;
+}
+/* Adds borders under the h2 and h3 headings*/
+h2{
+	border-bottom: 1px solid black;
+}
+h3{
+	border-bottom: 1px solid black;
+}
+
+/*** Page specific CSS ***/
+
+/* Used to format the features list(f_li) on the home.html page */
+ul#f_li{
+	padding-left: 30px;
+}
+/* Used to format the image on the home.html page */
+img#homepage{
+	padding: 15px 1.5625%;
+	max-width: 80%;
+}
+/* Used to size the textarea on the report_bug.html page */
+textarea{
+	height: auto;
+	resize: none;
+	width: 100%;
+}
+/* Used to turn the error messages red on the report_bug.html and game_updates.html pages */
+p.error {
+	color: red;
+}
+/* Used to size the web player frame containing the game in the web_player.html page */
+iframe {
+	width: 100%;
+}

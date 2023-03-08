@@ -1,0 +1,52 @@
+<!-- home.html -->
+<!--
+	Contribitors: Cole Sarno, Sairam Soundararajan
+    Program Description: Website homepage document
+	Course: CMSC 495 6383
+    Class: Current Trends and Projects in Computer Science
+	Created: 02/06/2023
+    Last Updated: 02/21/2023
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+ <head>
+	<title>Web Player</title>
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<meta charset="utf-8">
+	<!-- For mobile compatibility and scaling -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+		<header>
+   			<h1>Web Player</h1>
+		</header>
+		<aside>
+        <!-- Navigation links to different website pages -->
+			<nav id="nav_list">
+				<ul>
+					<li><a href ={{url_for('home')}}>Homepage</a></li>
+					<li><a href={{url_for('game_updates')}}>Game Updates</a></li>
+					<li><a href={{url_for('report_bug')}}>Report Bug</a></li>
+					<li><a href={{url_for('about')}}>About</a></li>
+                    <li><a href={{url_for('web_player')}}>Web Player</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<h2>
+				<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+				Web Player
+				<img src="{{ url_for('static', filename='Player.png')}}" alt="Player" style="display: inline;"/>
+			</h2>
+			<!-- The frame that allows the user to play the game in-browser -->
+			<iframe frameborder="0" src="https://itch.io/embed-upload/7464693?color=333333" allowfullscreen="" width="1024" height="788">
+				<!-- Link to the Chromashot project on game hosting service itch.io -->
+				<a href="https://devcolby.itch.io/chromashot">Play Chromashot on itch.io</a>
+			</iframe>
+		</main>	
+		<footer>
+			<p>Created by: Group 1, go to the <a href={{url_for('about')}}>About Page</a> for more information.</p>
+		</footer>
+ </body>
+</html>
